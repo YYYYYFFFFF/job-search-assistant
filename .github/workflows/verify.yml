@@ -1,0 +1,28 @@
+name: Verify toolkit
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  workflow:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ['3.9', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Windows timezone database
+        if: runner.os == 'Windows'
+        run: python -m pip install tzdata
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/demo.py
+      - run: python scripts/check_package.py

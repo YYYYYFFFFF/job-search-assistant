@@ -1,0 +1,44 @@
+---
+name: job-search
+description: Search vacancies, screen eligibility and direction match, deduplicate, prepare JD information and deliver recommendations.
+---
+
+# Job Search
+
+## Set search scope
+
+Read private `config.json` search preferences, `CURRENT.md` temporary priorities and relevant `profile.json` location/work-rights facts through the [workspace map](../../docs/data.md#workspace-map). Fix the requested publication window at search start in the configured timezone; use `search.days` when no window is supplied. Original publication dates determine eligibility; reposts retain their original date.
+
+Use configured platforms, keywords, locations and job types. Check current platform access. Follow directories and reposts to the current employer/ATS vacancy or the original recruiter ad when the employer is undisclosed. Try one suitable alternative for a blocked source and report the remaining gap. Stop when further relevant pages add no plausible new vacancies; describe the sources actually covered.
+
+## Screen and assess
+
+Read each full JD. Apply configured conditions/exclusions and current scope. Verify open status, publication date, location, employment relationship and essential eligibility. Record source evidence, check time and unresolved facts in the [job record](../../docs/data.md#job-record). Hold decisive unknowns and exclude failed conditions.
+
+Assess actual duties against configured career directions:
+
+- **high:** principal duties directly practice a current direction.
+- **partial:** explicit professional duties build relevant experience with a stated material gap.
+- **exclude:** duties lack a concrete connection to a current direction.
+- **hold:** decisive duties or evidence remain unclear.
+
+Give a concrete JD-based reason. Shared titles, industries or tools alone do not establish direction match. Resume availability does not change discovery eligibility or match labels.
+
+## Deduplicate
+
+Read existing job identities once through [list/show commands](../../docs/commands.md#jobs). Match the confirmed employer requisition first, then canonical application URLs, then employer/title/location/JD. Merge cross-posts into the existing record; preserve confirmed different requisitions. Resolve possible matches before creating another record. A provider board ID is evidence of that posting's identity only.
+
+## Prepare job information
+
+Reuse the reviewed JD and completed fields in the [job record](../../docs/data.md#job-record). Retain the original source URL and check time.
+
+1. Capture Role title, Company, Location, JD link, Application deadline, Duration, Compensation and Contact. Leave missing values unknown. Capture Responsibilities and Requirements in source order, retaining every bullet's meaning, nesting, alternatives, named tools and required/preferred status. Check the capture against the source once; label partial access and conflicts.
+2. Choose a category from the user's configured career directions by principal outputs and recurring duties. Preserve the advertised title. Flag an unresolved category for discussion.
+3. Extract `keywords` as meaningful occupational terms/phrases occurring at least twice after case, inflection and confirmed-alias normalization. Ignore duplicated source blocks and boilerplate; leave the set empty when appropriate. Extract explicitly advertised actions/outputs into `capabilities` and named software/languages/equipment into `tools`; one explicit mention suffices. Preserve scope and editions. Derive `tools_to_learn` from JD tools absent from recorded tools, labelling these as unrecorded learning targets, without inferring proficiency or inability.
+4. Save the source fields with [add-job/update-job](../../docs/commands.md#jobs). Reuse the existing ID across application steps. Keep facts and evidence distinct from the assessment.
+
+## Deliver recommendations
+
+Deliver only high/partial jobs whose decisive checks passed. Use Role and Info, Keywords, JD capture and Application Files in that order; Application Files states that materials are not prepared at discovery. Keep match reasons and cautions in chat.
+
+For configured chat delivery, run [recommend](../../docs/commands.md#recommendations) and present its result. For email delivery, send one recommendation per job to the configured user recipient through the live mail tool, verify recipient/body/send evidence, then record its exact message ID with `recommend --receipt`. Recover uncertain sends by exact ID/targeted delivery evidence before retrying. Report delivered jobs, reasons and access/coverage gaps. Keep incomplete jobs available for resumption.

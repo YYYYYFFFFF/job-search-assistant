@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "",
+  "contact": {"email": "", "phone": "", "location": "", "portfolio": "", "linkedin": ""},
+  "work_rights": {"details": "", "source": "", "verified_at": null},
+  "availability": "",
+  "tools": [],
+  "skills": [],
+  "employment": [],
+  "education": [],
+  "projects": [],
+  "open_questions": []
+}

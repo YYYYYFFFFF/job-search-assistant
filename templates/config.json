@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "timezone": "UTC",
+  "search": {
+    "days": 5,
+    "directions": [],
+    "locations": [],
+    "job_types": [],
+    "keywords": [],
+    "excluded_terms": [],
+    "conditions": [],
+    "platforms": []
+  },
+  "integrations": {
+    "delivery": "chat",
+    "email": {"mailbox": "", "recipient": ""},
+    "notion": {"application_tracker": "", "resume_versions": "", "question_bank": "", "projects": "", "interviews": ""},
+    "canva": {"designs_by_category": {}}
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "employer": "Example Research Cooperative",
+  "title": "Junior Data Analyst",
+  "location": "Wellington, New Zealand",
+  "url": "https://careers.example.test/jobs/analyst-101?utm_source=demo",
+  "requisition_id": "DEMO-101",
+  "category": "Data Analytics",
+  "checked_at": "2030-04-15T10:00:00+12:00",
+  "published_at": "2030-04-13",
+  "job_type": "Part-time",
+  "deadline": "2030-04-25",
+  "duration": "Six months",
+  "compensation": "NZD 35 per hour (fictional)",
+  "contact": null,
+  "jd": {
+    "responsibilities": [
+      "Use SQL to prepare weekly research reports.",
+      "Validate SQL query results and explain findings to project teams."
+    ],
+    "requirements": [
+      "Experience with SQL and spreadsheet analysis.",
+      "Clear written communication; Python experience preferred."
+    ]
+  },
+  "screening": {
+    "open": true,
+    "in_window": true,
+    "location": true,
+    "eligibility": true,
+    "match": "high",
+    "reason": "Fictional duties directly practice the demo candidate's data analysis direction."
+  },
+  "keywords": ["SQL"],
+  "capabilities": ["query validation", "research reporting"],
+  "tools": ["SQL", "Python"],
+  "tools_to_learn": ["Python"],
+  "evidence": "Entirely fictional fixture. No real vacancy, eligibility assertion or application."
+}

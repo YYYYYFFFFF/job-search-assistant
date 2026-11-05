@@ -1,0 +1,15 @@
+.career/
+**/.career/
+.env
+.env.*
+*.pem
+*.key
+*storage-state*.json
+*auth-state*.json
+__pycache__/
+*.py[cod]
+.DS_Store
+.vscode/
+dist/
+tmp/
+node_modules/
