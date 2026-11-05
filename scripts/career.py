@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Career Workflow's local storage and material helpers. Python 3.9+, stdlib only."""
+"""Job Search Assistant's local storage and material helpers. Python 3.9+, stdlib only."""
 import argparse
 import collections
 import datetime as dt

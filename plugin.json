@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "career-workflow",
+  "name": "job-search-assistant",
   "version": "0.1.0",
   "description": "Search jobs, prepare applications and maintain career materials with four focused agent skills.",
   "author": {"name": "YYYYYFFFFF", "url": "https://github.com/YYYYYFFFFF"},

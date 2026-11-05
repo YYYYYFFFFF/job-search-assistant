@@ -15,6 +15,6 @@ Checked 5 November 2026.
 | Anonymous GitHub source download | All 29 published files matched the public branch; tests and demo passed from the fresh download |
 | Public history | Independent public commits; personal workspace history and original downloaded resources excluded |
 
-Matrix evidence: [GitHub Actions run 42012900086](https://github.com/YYYYYFFFFF/career-workflow/actions/runs/42012900086).
+Matrix evidence: [GitHub Actions run 42012900086](https://github.com/YYYYYFFFFF/job-search-assistant/actions/runs/42012900086).
 
 Live Notion/email/Canva operations, another person's authenticated browser, public plugin-directory review and a real employer submission were not part of this synthetic release check. Their account-specific acceptance steps are listed in [integrations](integrations.md#integration-acceptance-checklist).

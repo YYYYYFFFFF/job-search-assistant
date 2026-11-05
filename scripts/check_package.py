@@ -62,7 +62,7 @@ def check(root=ROOT):
         if not text.startswith("---\nname: " + name + "\ndescription: "):
             problems.append("Invalid Skill metadata: " + name)
     manifest = json.loads((root / "plugin.json").read_text())
-    if manifest.get("$schema") != "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json" or manifest.get("name") != "career-workflow":
+    if manifest.get("$schema") != "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json" or manifest.get("name") != "job-search-assistant":
         problems.append("Invalid portable manifest")
     return {"files_checked": len(files), "skills": len(found), "problems": problems}
 

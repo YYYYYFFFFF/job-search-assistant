@@ -1,4 +1,4 @@
-# Career Workflow
+# Job Search Assistant
 
 Use the user's latest instruction and the private workspace selected by `--workspace` or `CAREER_WORKSPACE`, default `.career/`. Analysis requests authorize discussion. Run [initialization](docs/setup.md#local-setup) when the user requests setup. Repository Skills are written in English; chat follows the user's language.
 

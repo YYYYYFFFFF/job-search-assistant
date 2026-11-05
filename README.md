@@ -1,4 +1,4 @@
-# Career Workflow
+# Job Search Assistant
 
 An agent-assisted job-search workflow: find suitable roles, prepare application materials, review them yourself and maintain the facts/resume keywords used next time.
 
