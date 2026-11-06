@@ -9,7 +9,7 @@ description: Search vacancies, screen eligibility and direction match, deduplica
 
 Read private `config.json` search preferences, `CURRENT.md` temporary priorities and relevant `profile.json` location/work-rights facts through the [workspace map](../../docs/data.md#workspace-map). Fix the requested publication window at search start in the configured timezone; use `search.days` when no window is supplied. Original publication dates determine eligibility; reposts retain their original date.
 
-Use configured platforms, keywords, locations and job types. Check current platform access. Follow directories and reposts to the current employer/ATS vacancy or the original recruiter ad when the employer is undisclosed. Try one suitable alternative for a blocked source and report the remaining gap. Stop when further relevant pages add no plausible new vacancies; describe the sources actually covered.
+Use configured platforms, keywords, locations and job types. Check current platform access. Follow directories and reposts to the current employer/ATS vacancy or the original recruiter ad when the employer is undisclosed. Try one suitable alternative for a blocked source and report the remaining gap; continue other accessible sources and candidate work. Stop expanding discovery when further accessible, relevant pages add no plausible new vacancies; inaccessible pages or empty search-engine queries do not establish that stopping condition.
 
 ## Screen and assess
 
@@ -39,6 +39,18 @@ Reuse the reviewed JD and completed fields in the [job record](../../docs/data.m
 
 ## Deliver recommendations
 
-Deliver only high/partial jobs whose decisive checks passed. Use Role and Info, Keywords, JD capture and Application Files in that order; Application Files states that materials are not prepared at discovery. Keep match reasons and cautions in chat.
+Deliver only high/partial jobs whose decisive checks passed. Once a job has passed deduplication and preparation, deliver its recommendation without waiting for unrelated sources or held jobs. Use Role and Info, Keywords, JD capture and Application Files in that order; Application Files states that materials are not prepared at discovery. Keep match reasons and cautions in chat.
 
-For configured chat delivery, run [recommend](../../docs/commands.md#recommendations) and present its result. For email delivery, send one recommendation per job to the configured user recipient through the live mail tool, verify recipient/body/send evidence, then record its exact message ID with `recommend --receipt`. Recover uncertain sends by exact ID/targeted delivery evidence before retrying. Report delivered jobs, reasons and access/coverage gaps. Keep incomplete jobs available for resumption.
+For configured chat delivery, run [recommend](../../docs/commands.md#recommendations) and present its result. For email delivery, send one recommendation per job to the configured user recipient through the live mail tool, verify recipient/body/send evidence, then record its exact message ID with `recommend --receipt`. Recover uncertain sends by exact ID/targeted delivery evidence before retrying.
+
+## Finish or resume
+
+Before ending, account for sources checked or blocked and give every plausible job found a supported decision: retained, excluded, duplicate or held. Continue any remaining independent work that available tools and evidence allow.
+
+Report the applicable outcomes separately:
+
+- **Completed search:** discovery reached its stopping condition, all found candidates were screened, and all recommendations due were delivered and verified. Zero recommendations is valid after completed screening; never add jobs to meet a quota.
+- **Partial coverage:** access gaps or unresolved essential checks prevent a completed-search conclusion. State actual coverage, held jobs, blockers and next steps; do not present this as a completed zero-result search.
+- **Pending delivery:** retained jobs remain undelivered or their delivery status is uncertain. State each job's actual delivery status and available message IDs; continue other ready recommendations.
+
+Report delivered jobs and reasons alongside these outcomes. Keep incomplete jobs and delivery evidence available in their existing records and reuse completed checks when resuming.
