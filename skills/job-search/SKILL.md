@@ -9,11 +9,17 @@ description: Search vacancies, screen eligibility and direction match, deduplica
 
 Read private `config.json` search preferences, `CURRENT.md` temporary priorities and relevant `profile.json` location/work-rights facts through the [workspace map](../../docs/data.md#workspace-map). Fix the requested publication window at search start in the configured timezone; use `search.days` when no window is supplied. Original publication dates determine eligibility; reposts retain their original date.
 
-Use configured platforms, keywords, locations and job types. Check current platform access. Follow directories and reposts to the current employer/ATS vacancy or the original recruiter ad when the employer is undisclosed. Try one suitable alternative for a blocked source and report the remaining gap; continue other accessible sources and candidate work. Stop expanding discovery when further accessible, relevant pages add no plausible new vacancies; inaccessible pages or empty search-engine queries do not establish that stopping condition.
+Use configured platforms, keywords, locations and job types. Check current platform access. Follow directories and reposts to the current employer/ATS vacancy or the original recruiter ad when the employer is undisclosed. Try one suitable alternative for a blocked source and report the remaining gap; continue other accessible sources and candidate work.
+
+For each configured career direction, check at least two independent sources within the permitted location/remote scope where accessible, and record any shortfall. Use native board filters, sorting and relevant pagination; verify that redirects preserve the applied filters and sort order. Keep indexed site-search results distinct from native board coverage. Retain the source, query, filters, access method, inspected pages/range and remaining gaps in the current context.
+
+When results are sparse, fill planned coverage gaps with related terms and specialist, student or direct-employer sources, and seek missing evidence for promising holds within the access limits above. Stop expanding discovery only after accessible planned checks and candidate follow-ups are resolved or have a recorded blocker, and further accessible, relevant pages add no plausible new vacancies. Inaccessible pages, empty search-engine queries and the number of recommendations delivered do not establish that stopping condition.
 
 ## Screen and assess
 
-Read each full JD. Apply configured conditions/exclusions and current scope. Verify open status, publication date, location, employment relationship and essential eligibility. Record source evidence, check time and unresolved facts in the [job record](../../docs/data.md#job-record). Hold decisive unknowns and exclude failed conditions.
+Read each full JD. Apply configured conditions/exclusions and current scope. Verify open status, publication date, location and employment arrangement, and resolve facts needed to apply an explicit search condition. Record source evidence, check time and unresolved facts in the [job record](../../docs/data.md#job-record). Hold decisive missing vacancy evidence and exclude failed search conditions.
+
+Treat other advertised qualifications, experience, graduation year, hours, pay and start date as cautions unless a configured search condition explicitly makes them a recommendation gate. Do not add candidate-readiness, tool-proficiency or resume-availability gates. Unknown candidate fit alone is not a hold reason. Preserve all requirements in the JD capture and explain fit concerns in chat, without claiming that the candidate meets them. Set `screening.eligibility` from the configured recommendation conditions; retain candidate-fit cautions in `evidence`.
 
 Assess actual duties against configured career directions:
 
