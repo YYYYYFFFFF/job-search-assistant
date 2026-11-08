@@ -13,3 +13,6 @@ __pycache__/
 dist/
 tmp/
 node_modules/
+
+# Keep the externally installed get-job skill local.
+/.agents/skills/get-job/
